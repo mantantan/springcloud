@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>yonyou.esn</groupId>
+    <artifactId>springcloud</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+    <name>springcloud</name>
+    <description>Demo project for springcloud</description>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.9.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <!-- 声明多个子模块 -->
+    <modules>
+        <module>eureka-server</module>
+        <module>eureka-client</module>
+        <module>ribbon-consumer</module>
+        <module>admin-server</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <!--模块version-->
+        <esn.eureka.version>1.0.0</esn.eureka.version>
+        <esn.rbbon.consumer.version>1.0.0</esn.rbbon.consumer.version>
+        <esn.admin.verson>1.0.0</esn.admin.verson>
+
+        <logback-classic.version>1.1.11</logback-classic.version>
+        <commons.lang3.version>3.2.1</commons.lang3.version>
+        <javax.servlet.version>3.1.0</javax.servlet.version>
+        <httpclient.version>4.4.1</httpclient.version>
+        <fastjson.version>1.2.28</fastjson.version>
+        <joda.time.version>2.9.9</joda.time.version>
+        <com.google.code.gson.version>2.8.0</com.google.code.gson.version>
+        <spring-cloud.version>Edgware.SR1</spring-cloud.version>
+        <spring.boot.admin.version>1.5.6</spring.boot.admin.version>
+    </properties>
+
+    <!--依赖-->
+    <dependencies>
+        <!--log-->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-core</artifactId>
+        </dependency>
+    </dependencies>
+
+    <!-- 版本说明：这里统一管理依赖的版本号 -->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>yonyou.esn</groupId>
+                <artifactId>eureka-server</artifactId>
+                <version>${esn.eureka.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>yonyou.esn</groupId>
+                <artifactId>eureka-client</artifactId>
+                <version>${esn.eureka.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>yonyou.esn</groupId>
+                <artifactId>ribbon-consumer</artifactId>
+                <version>${esn.rbbon.consumer.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>yonyou.esn</groupId>
+                <artifactId>ribbon-consumer</artifactId>
+                <version>${esn.admin.version}</version>
+            </dependency>
+
+            <!--log-->
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-classic</artifactId>
+                <version>${logback-classic.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-core</artifactId>
+                <version>${logback-classic.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient</artifactId>
+                <version>${httpclient.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>commons-logging</groupId>
+                        <artifactId>commons-logging</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>javax.servlet-api</artifactId>
+                <version>${javax.servlet.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons.lang3.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>joda-time</groupId>
+                <artifactId>joda-time</artifactId>
+                <version>${joda.time.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.code.gson</groupId>
+                <artifactId>gson</artifactId>
+                <version>${com.google.code.gson.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/de.codecentric/spring-boot-admin-server -->
+            <dependency>
+                <groupId>de.codecentric</groupId>
+                <artifactId>spring-boot-admin-server</artifactId>
+                <version>${spring.boot.admin.version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/de.codecentric/spring-boot-admin-server-ui -->
+            <dependency>
+                <groupId>de.codecentric</groupId>
+                <artifactId>spring-boot-admin-server-ui</artifactId>
+                <version>${spring.boot.admin.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>de.codecentric</groupId>
+                <artifactId>spring-boot-admin-starter-client</artifactId>
+                <version>${spring.boot.admin.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <!--跳过测试-->
+                    <skipTests>true</skipTests>
+                    <runOrder>alphabetical</runOrder>
+                    <systemPropertyVariables>
+                        <profile.active>test</profile.active>
+                    </systemPropertyVariables>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
