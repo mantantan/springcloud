@@ -10,7 +10,10 @@ target/
 .springBeans
 
 ### IntelliJ IDEA ###
-.idea/
+.idea/compiler.xml
+.idea/encodings.xml
+.idea/misc.xml
+.idea/modules.xml
 .idea
 *.iws
 *.iml
@@ -25,3 +28,12 @@ nbdist/
 .nb-gradle/
 LOG_PATH_IS_UNDEFINED/
 .idea/*
+eureka-client/src/main/resources/static/
+eureka-client/src/main/resources/templates/
+eureka-server/src/main/resources/static/
+eureka-server/src/main/resources/templates/
+ribbon-consumer/src/main/resources/static/
+ribbon-consumer/src/main/resources/templates/
+/.idea/compiler.xml
+!/.idea/compiler.xml
+/.idea/modules.xml
