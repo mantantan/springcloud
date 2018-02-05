@@ -24,6 +24,7 @@
         <module>eureka-client</module>
         <module>ribbon-consumer</module>
         <module>admin-server</module>
+        <module>common-api</module>
     </modules>
 
     <properties>
@@ -34,6 +35,7 @@
         <esn.eureka.version>1.0.0</esn.eureka.version>
         <esn.rbbon.consumer.version>1.0.0</esn.rbbon.consumer.version>
         <esn.admin.verson>1.0.0</esn.admin.verson>
+        <esn.common.api.version>1.0.0</esn.common.api.version>
 
         <logback-classic.version>1.1.11</logback-classic.version>
         <commons.lang3.version>3.2.1</commons.lang3.version>
@@ -81,6 +83,11 @@
                 <groupId>yonyou.esn</groupId>
                 <artifactId>ribbon-consumer</artifactId>
                 <version>${esn.admin.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>yonyou.esn</groupId>
+                <artifactId>common-api</artifactId>
+                <version>${esn.common.api.version}</version>
             </dependency>
 
             <!--log-->
