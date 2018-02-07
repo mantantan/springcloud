@@ -7,4 +7,4 @@
 ### eureka-server:eureka服务
 ### hystrix-dashboard:熔断器dashboad后台监控平台
 ### ribbon-server:ribbon客户端负载均衡demo+hystrix降级处理
-### turbine-server:turbine集群管理服务
+### turbine-server:turbine集群流管理服务
