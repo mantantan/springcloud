@@ -37,3 +37,5 @@ ribbon-consumer/src/main/resources/templates/
 /.idea/compiler.xml
 !/.idea/compiler.xml
 /.idea/modules.xml
+/.idea/
+/.idea/artifacts/

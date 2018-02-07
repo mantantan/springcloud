@@ -10,7 +10,9 @@
         <module name="common-api" />
         <module name="eureka-client" />
         <module name="eureka-server" />
+        <module name="hystrix-dashboard" />
         <module name="ribbon-consumer" />
+        <module name="turbine-server" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -18,8 +20,10 @@
       <module name="common-api" target="1.8" />
       <module name="eureka-client" target="1.8" />
       <module name="eureka-server" target="1.8" />
+      <module name="hystrix-dashboard" target="1.8" />
       <module name="ribbon-consumer" target="1.8" />
       <module name="springcloud" target="1.8" />
+      <module name="turbine-server" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -25,6 +25,8 @@
         <module>ribbon-consumer</module>
         <module>admin-server</module>
         <module>common-api</module>
+        <module>hystrix-dashboard</module>
+        <module>turbine-server</module>
     </modules>
 
     <properties>
@@ -36,6 +38,8 @@
         <esn.rbbon.consumer.version>1.0.0</esn.rbbon.consumer.version>
         <esn.admin.verson>1.0.0</esn.admin.verson>
         <esn.common.api.version>1.0.0</esn.common.api.version>
+        <esn.hystrix.dashboard.version>1.0.0</esn.hystrix.dashboard.version>
+        <esn.turbine.version>1.0.0</esn.turbine.version>
 
         <logback-classic.version>1.1.11</logback-classic.version>
         <commons.lang3.version>3.2.1</commons.lang3.version>
@@ -88,6 +92,16 @@
                 <groupId>yonyou.esn</groupId>
                 <artifactId>common-api</artifactId>
                 <version>${esn.common.api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>yonyou.esn</groupId>
+                <artifactId>hystrix-dashboard</artifactId>
+                <version>${esn.hystrix.dashboard.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>yonyou.esn</groupId>
+                <artifactId>turbine-server</artifactId>
+                <version>${esn.turbine.version}</version>
             </dependency>
 
             <!--log-->

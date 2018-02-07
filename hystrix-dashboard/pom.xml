@@ -9,25 +9,12 @@
 	</parent>
 
 	<groupId>yonyou.esn</groupId>
-	<artifactId>ribbon-consumer</artifactId>
+	<artifactId>hystrix-dashboard</artifactId>
 	<packaging>jar</packaging>
-	<name>ribbon-consumer</name>
-	<description>ribbon-consumer</description>
+	<name>hystrix-dashboard</name>
+	<description>hystrix-dashboard Demo</description>
 
 	<dependencies>
-		<dependency>
-			<groupId>yonyou.esn</groupId>
-			<artifactId>common-api</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-eureka</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-ribbon</artifactId>
-		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -37,6 +24,16 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-eureka</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-ribbon</artifactId>
 		</dependency>
 
 		<!--开启actuator endpoint监控-->
@@ -53,7 +50,10 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-hystrix</artifactId>
 		</dependency>
-
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-hystrix-dashboard</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -64,6 +64,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
-
 </project>

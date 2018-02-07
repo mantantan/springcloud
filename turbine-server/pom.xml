@@ -9,25 +9,12 @@
 	</parent>
 
 	<groupId>yonyou.esn</groupId>
-	<artifactId>ribbon-consumer</artifactId>
+	<artifactId>turbine-server</artifactId>
 	<packaging>jar</packaging>
-	<name>ribbon-consumer</name>
-	<description>ribbon-consumer</description>
+	<name>turbine-server</name>
+	<description>turbine-server demo</description>
 
 	<dependencies>
-		<dependency>
-			<groupId>yonyou.esn</groupId>
-			<artifactId>common-api</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-eureka</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-ribbon</artifactId>
-		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -39,23 +26,16 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!--开启actuator endpoint监控-->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-turbine</artifactId>
+		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>de.codecentric</groupId>
-			<artifactId>spring-boot-admin-starter-client</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-hystrix</artifactId>
-		</dependency>
-
 	</dependencies>
-
 	<build>
 		<plugins>
 			<plugin>
@@ -64,6 +44,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
-
 </project>

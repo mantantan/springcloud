@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 import yonyou.esn.entity.User;
+import yonyou.esn.service.RpcUserservice;
 
 /**
  * Created by mantantan on 2018/2/4.
@@ -17,12 +18,10 @@ import yonyou.esn.entity.User;
 public class RpcController {
 
     @Autowired
-    private RestTemplate restTemplate;
+    private RpcUserservice rpcUserservice;
 
     @GetMapping("/user")
     public User getUserById(@RequestParam String id){
-        ResponseEntity<User> responseEntity = restTemplate.getForEntity("http://EUREKA-CLIENT/user/get?id={}", User.class, "test");
-        User user = responseEntity.getBody();
-        return user;
+        return rpcUserservice.getUserById(id);
     }
 }

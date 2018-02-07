@@ -1,4 +1,4 @@
-package yongyou.esn;
+package yonyou.esn;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
