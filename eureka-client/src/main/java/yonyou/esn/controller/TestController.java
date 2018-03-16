@@ -38,4 +38,9 @@ public class TestController {
         counterService.increment("yonyou.esn.openapi.mantantan");
         return testService.getSomething();
     }
+
+    @RequestMapping("/mantantan/test")
+    public String testZuul(){
+        return "testZuul";
+    }
 }

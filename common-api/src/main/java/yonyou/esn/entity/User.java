@@ -8,6 +8,10 @@ public class User {
     private String name;
     private String gender;
 
+    public User(){
+
+    }
+
     public String getId() {
         return id;
     }

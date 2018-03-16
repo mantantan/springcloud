@@ -27,6 +27,8 @@
         <module>common-api</module>
         <module>hystrix-dashboard</module>
         <module>turbine-server</module>
+        <module>feign-consumer</module>
+        <module>zuul-server</module>
     </modules>
 
     <properties>

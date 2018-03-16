@@ -8,3 +8,5 @@
 ### hystrix-dashboard:熔断器dashboad后台监控平台
 ### ribbon-server:ribbon客户端负载均衡demo+hystrix降级处理
 ### turbine-server:turbine集群流管理服务
+### feign-consumer:feign客户端负载均衡demo,集成了ribbon+hystrix降级处理
+### zuul-server:zuul网关服务demo
